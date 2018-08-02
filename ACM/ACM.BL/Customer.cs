@@ -53,5 +53,8 @@ namespace ACM.BL
                 return LastName + "," + FirstName;
             }
         }
+
+        // Note: if we define "internal" access modifier, this means that it is accessible only inside this project,
+        // and NOT by any project in this solution, or any external components.
     }
 }
