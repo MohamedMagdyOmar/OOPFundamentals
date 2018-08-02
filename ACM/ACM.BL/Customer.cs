@@ -10,6 +10,18 @@ namespace ACM.BL
     // and by any "external component"
     public class Customer
     {
+
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            // this referes to this instance of the class.
+            this.CustomerId = customerId;
+        }
+
         // a class should encapsulate its data, that is mean that the actual data should be hidden,
         // and access to this data should be provided with accessors.
 
