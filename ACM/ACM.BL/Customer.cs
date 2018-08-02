@@ -66,5 +66,7 @@ namespace ACM.BL
 
         // Note: if we define "internal" access modifier, this means that it is accessible only inside this project,
         // and NOT by any project in this solution, or any external components.
+
+        public static int InstanceCount { get; set; }
     }
 }
