@@ -10,6 +10,18 @@ namespace ACM.BL
     // and by any "external component"
     public class Customer
     {
+
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            // this referes to this instance of the class.
+            this.CustomerId = customerId;
+        }
+
         // a class should encapsulate its data, that is mean that the actual data should be hidden,
         // and access to this data should be provided with accessors.
 
@@ -68,5 +80,36 @@ namespace ACM.BL
         // and NOT by any project in this solution, or any external components.
 
         public static int InstanceCount { get; set; }
+
+        public bool Validate()
+        {
+            bool isValid = true;
+            if(string.IsNullOrWhiteSpace(LastName))
+            {
+                isValid = false;
+            }
+
+            if(string.IsNullOrWhiteSpace(EmailAddress))
+            {
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        public bool Save()
+        {
+            return true;
+        }
+
+        public Customer Retrieve(int customerId)
+        {
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            return new List<Customer>();
+        }
     }
 }
