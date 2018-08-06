@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Order
+    public class Order: EntityBase
     {
         public Order()
         {
@@ -43,7 +43,7 @@ namespace ACM.BL
             return true;
         }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 

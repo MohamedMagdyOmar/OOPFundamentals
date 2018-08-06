@@ -12,7 +12,7 @@ namespace ACM.BL
     // Now we need to define the "composition" relationship between the "customer" and the "address".
     // we have each "customer" "has a" "home address", and "has a" "work address".
     // so we are going to create  the below "list of" address
-    public class Customer
+    public class Customer : EntityBase
     {
         // we add "constructor chaining" so by default this "constructor" call
         // below constructor and pass "0" to it.
@@ -98,7 +98,7 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if(string.IsNullOrWhiteSpace(LastName))

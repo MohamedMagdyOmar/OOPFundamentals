@@ -20,7 +20,21 @@ namespace ACM.BL
         // "uses a" instance of this class.
         public bool Save(Customer customer)
         {
-            return true;
+            var success = true;
+
+            if (customer.HasChanges && customer.IsValid)
+            {
+                if (customer.IsNew)
+                {
+                    // call insert procedure
+                }
+
+                else
+                {
+                    // call update procedure
+                }
+            }
+            return success;
         }
 
         public Customer Retrieve(int customerId)

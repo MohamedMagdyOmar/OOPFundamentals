@@ -8,9 +8,24 @@ namespace ACM.BL
 {
     public class OrderRepository
     {
-        public bool Save()
+        public bool Save(Order order)
         {
-            return true;
+            var success = true;
+
+            if (order.HasChanges && order.IsValid)
+            {
+                if (order.IsNew)
+                {
+                    // call insert procedure
+                }
+
+                else
+                {
+                    // call update procedure
+                }
+
+            }
+            return success;
         }
 
         public Order Retrieve(int orderId)
