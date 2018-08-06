@@ -120,5 +120,10 @@ namespace ACM.BL
         {
             return new List<Customer>();
         }
+
+        public override string ToString()
+        {
+            return FullName;
+        }
     }
 }
