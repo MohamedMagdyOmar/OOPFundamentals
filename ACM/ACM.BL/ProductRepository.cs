@@ -8,10 +8,27 @@ namespace ACM.BL
 {
     public class ProductRepository
     {
-        public bool Save()
+        public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges && product.IsValid)
+            {
+                if (product.IsNew)
+                {
+                    // call insert procedure
+                }
+
+                else
+                {
+                    // call update procedure
+                }
+
+            }
+            return success;
         }
+
+           
 
         public Product Retrieve(int productId)
         {
