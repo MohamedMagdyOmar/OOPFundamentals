@@ -20,7 +20,8 @@ namespace ACM.BL
 
         public int OrderId { get; private set; }
 
-        public string ShippingAddress { get; set; }
+        public int CustomerId { get; set; }
+        public int ShippingAddressId { get; set; }
 
         // "DateTimeOffset" is very usefull if date is in different time zone.
         // it is easier to be used than normalizing all date to "UTC".

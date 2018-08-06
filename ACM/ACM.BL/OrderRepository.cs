@@ -24,5 +24,50 @@ namespace ACM.BL
 
             return order;
         }
+
+        public OrderDisplay RetrieveOrderDisplay(int orderId)
+        {
+            OrderDisplay orderDisplay = new OrderDisplay();
+
+            if(orderId == 10)
+            {
+                orderDisplay.FirstName = "Mohamed";
+                orderDisplay.LastName = "Magdy";
+                orderDisplay.orderDate = new DateTimeOffset(2018, 8, 6, 10, 00, 00, new TimeSpan(7, 0, 0));
+                orderDisplay.ShippingAddress = new Address()
+                {
+                    AddressType = 1,
+                    StreetLine1 = "Bag End",
+                    StreetLine2 = "Bagshot row",
+                    City = "Hobbiton",
+                    State = "Shire",
+                    Country = "Middle Earth",
+                    PostalCode = "114"
+                };
+            }
+
+            orderDisplay.OrderDisplayItemList = new List<OrderDisplayItem>();
+
+
+            if (orderId == 10)
+            {
+                var orderDisplayItem = new OrderDisplayItem()
+                {
+                    ProductName = "Sunflowers",
+                    PurchasePrice = 15.96m,
+                    OrderQuantity = 2
+                };
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
+
+                orderDisplayItem = new OrderDisplayItem()
+                {
+                    ProductName = "Rake",
+                    PurchasePrice = 6m,
+                    OrderQuantity = 1
+                };
+                orderDisplay.OrderDisplayItemList.Add(orderDisplayItem);
+            }
+            return orderDisplay;
+        }
     }
 }
