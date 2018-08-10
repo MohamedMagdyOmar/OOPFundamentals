@@ -18,11 +18,13 @@ namespace ACME.Common
                 {
                     if(Char.IsUpper(letter))
                     {
+                        result = result.Trim();
                         result += " ";
                     }
 
                     result += letter;
                 }
+                result = result.Trim();
             }
 
             return result;

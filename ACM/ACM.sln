@@ -9,6 +9,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{B88C72F8
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "ACM.BLTest\ACM.BLTest.csproj", "{C9C1A050-EC8D-4EAC-AB0C-93CFA2211306}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACME.Common", "ACME.Common\ACME.Common.csproj", "{675D875C-EBE9-4CEF-9CEC-AE526DD78AAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACME.CommonTest", "ACME.CommonTest\ACME.CommonTest.csproj", "{F483220F-39B0-4F03-A2BE-8229CC0494EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +27,21 @@ Global
 		{C9C1A050-EC8D-4EAC-AB0C-93CFA2211306}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9C1A050-EC8D-4EAC-AB0C-93CFA2211306}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9C1A050-EC8D-4EAC-AB0C-93CFA2211306}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675D875C-EBE9-4CEF-9CEC-AE526DD78AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675D875C-EBE9-4CEF-9CEC-AE526DD78AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675D875C-EBE9-4CEF-9CEC-AE526DD78AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675D875C-EBE9-4CEF-9CEC-AE526DD78AAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F483220F-39B0-4F03-A2BE-8229CC0494EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F483220F-39B0-4F03-A2BE-8229CC0494EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F483220F-39B0-4F03-A2BE-8229CC0494EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F483220F-39B0-4F03-A2BE-8229CC0494EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C9C1A050-EC8D-4EAC-AB0C-93CFA2211306} = {B88C72F8-3130-4C94-8EEE-9E73001E4EF5}
+		{F483220F-39B0-4F03-A2BE-8229CC0494EC} = {B88C72F8-3130-4C94-8EEE-9E73001E4EF5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {564DA345-1819-434F-93FE-06A1CF5EEA33}
