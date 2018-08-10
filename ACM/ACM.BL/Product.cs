@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACME.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,18 +26,23 @@ namespace ACM.BL
         // note that it is "Auto Implemented" property, so we can not add code to
         // "setter" or "getter". so the first step is to convert it from "auto implemented"
         // property, into "fully implemented" property.
-        public string ProductName { get; set; }
+        //public string ProductName { get; set; }
 
         // so is it better to add the code for adding the space here in the "getter"
         // or it is better to add it in seperate method? seperate method will be easier
         // to build and test. so we are going to create method called "InsertSpaces"
-        //private string _productName;
+        private string _productName;
 
-        //public string ProductnName
-        //{
-        //    get { return _productName; }
-        //    set { _productName = value; }
-        //}
+        // now we are going to use the "Common project" that we created
+        // but the question now we donot need all the "properties" of the class "StringHandler"
+        // we just need to call the method inside it -> so we need "static classes"
+        public string ProductName
+        {
+            get {
+                StringHandler handler = new StringHandler();
+                return handler.InsertSpaces(_productName); }
+            set { _productName = value; }
+        }
 
         // so thisnis general purpose function that takes string and add
         // spaces to it. but this is not "product" class responsiblity to add spaces
