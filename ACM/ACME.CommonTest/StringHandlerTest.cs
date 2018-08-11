@@ -10,8 +10,9 @@ namespace ACME.CommonTest
         public void InsertSpacesTestValid()
         {
             var expected = "Sonic Screwdriver";
+            var source = "SonicScrewdriver";
 
-            var actual = StringHandler.InsertSpaces("SonicScrewdriver");
+            var actual = source.InsertSpaces();
 
             Assert.AreEqual(actual, expected);
         }
@@ -20,8 +21,9 @@ namespace ACME.CommonTest
         public void InsertSpacesTestWithExistingSpace()
         {
             var expected = "Sonic Screwdriver";
+            var source = "Sonic Screwdriver";
 
-            var actual = StringHandler.InsertSpaces("Sonic Screwdriver");
+            var actual = source.InsertSpaces();
 
             Assert.AreEqual(actual, expected);
         }

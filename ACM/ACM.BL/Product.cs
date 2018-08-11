@@ -41,7 +41,10 @@ namespace ACM.BL
             get
             {   // after converting StringHandler to static class, we have to comment this line
                 //  StringHandler handler = new StringHandler();
-                return StringHandler.InsertSpaces(_productName); }
+                // we will also will comment this line, because we created extension method
+                // return StringHandler.InsertSpaces(_productName); }
+                return _productName.InsertSpaces();
+            }
             set { _productName = value; }
         }
 
