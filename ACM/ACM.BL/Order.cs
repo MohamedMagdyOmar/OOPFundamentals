@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACME.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ACM.BL
 {
-    public class Order: EntityBase
+    public class Order: EntityBase, ILoggable
     {
         public Order()
         {
@@ -60,5 +61,10 @@ namespace ACM.BL
             return OrderDate.Value.Date + "( " + OrderId + " )";
         }
 
+        public string Log()
+        {
+            var logString = this.OrderId + ": " + "Date: " + this.OrderDate.Value.Date + " " + "Status: " + this.EntityState.ToString();
+            return logString;
+        }
     }
 }

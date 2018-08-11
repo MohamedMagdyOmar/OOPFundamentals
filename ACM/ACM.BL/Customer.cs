@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACME.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace ACM.BL
     // Now we need to define the "composition" relationship between the "customer" and the "address".
     // we have each "customer" "has a" "home address", and "has a" "work address".
     // so we are going to create  the below "list of" address
-    public class Customer : EntityBase
+    public class Customer : EntityBase, ILoggable
     {
         // we add "constructor chaining" so by default this "constructor" call
         // below constructor and pass "0" to it.
@@ -124,6 +125,12 @@ namespace ACM.BL
         public override string ToString()
         {
             return FullName;
+        }
+
+        public string Log()
+        {
+            var logString = this.CustomerId + ": " + this.FullName + " " + "Email: " + this.EmailAddress + " " + "Status: " + this.EntityState.ToString();
+            return logString;
         }
     }
 }
