@@ -38,9 +38,10 @@ namespace ACM.BL
         // we just need to call the method inside it -> so we need "static classes"
         public string ProductName
         {
-            get {
-                StringHandler handler = new StringHandler();
-                return handler.InsertSpaces(_productName); }
+            get
+            {   // after converting StringHandler to static class, we have to comment this line
+                //  StringHandler handler = new StringHandler();
+                return StringHandler.InsertSpaces(_productName); }
             set { _productName = value; }
         }
 
