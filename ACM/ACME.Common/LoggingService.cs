@@ -12,7 +12,7 @@ namespace ACME.Common
     {
         // in this function we will pass a list of all objects that need to be logged.
         // this list we contain objects from class "Customer", and from class "Product", so it takes list of "Object"
-        public static void WriteTiFile(List<Object> changedItems)
+        public static void WriteToFile(List<ILoggable> changedItems)
         {
             foreach (var item in changedItems)
             {
@@ -28,6 +28,9 @@ namespace ACME.Common
 
                 // so what if we create an "Interface" !!! and implement this interface in each class, and acess each one using the interface !!!
                 // Console.WriteLine(item.);
+
+                // look now we have the "log" method
+                Console.WriteLine(item.Log());
             }
 
         }
